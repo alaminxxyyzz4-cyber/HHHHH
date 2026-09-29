@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>কবি রবিউল ইসলাম | কবিতা</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Noto Sans Bengali","Segoe UI",sans-serif;
+    background:#f7f8fc;
+    color:#1f2937;
+    line-height:1.8;
+}
+
+/* NAVBAR */
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:white;
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+}
+
+.nav-container{
+    max-width:1150px;
+    margin:auto;
+    padding:15px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+}
+
+.logo span{
+    display:block;
+    font-size:12px;
+    color:#777;
+}
+
+.nav-links{
+    display:flex;
+    gap:20px;
+    list-style:none;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#222;
+    font-weight:bold;
+}
+
+.nav-links a:hover{
+    color:#6750e8;
+}
+
+/* HERO */
+
+.hero{
+    min-height:650px;
+    background:linear-gradient(135deg,#171c3a,#5b4bc4);
+    color:white;
+    display:flex;
+    align-items:center;
+    text-align:center;
+    padding:70px 20px;
+}
+
+.hero-content{
+    max-width:900px;
+    margin:auto;
+}
+
+.author-photo{
+    width:190px;
+    height:190px;
+    object-fit:cover;
+    border-radius:50%;
+    border:6px solid white;
+    box-shadow:0 15px 40px rgba(0,0,0,.3);
+    margin-bottom:25px;
+}
+
+.badge{
+    display:inline-block;
+    padding:7px 18px;
+    border-radius:50px;
+    background:rgba(255,255,255,.15);
+    margin-bottom:15px;
+}
+
+.hero h1{
+    font-size:clamp(42px,7vw,75px);
+    line-height:1.15;
+}
+
+.hero h1 span{
+    display:block;
+}
+
+.hero h2{
+    font-size:28px;
+    margin:15px 0;
+}
+
+.hero p{
+    max-width:650px;
+    margin:auto;
+    font-size:18px;
+    opacity:.9;
+}
+
+.hero-buttons{
+    margin-top:30px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:13px 25px;
+    border-radius:12px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.primary-btn{
+    background:white;
+    color:#4c3db5;
+}
+
+.secondary-btn{
+    border:1px solid white;
+    color:white;
+}
+
+/* STATS */
+
+.stats{
+    max-width:1000px;
+    margin:-50px auto 0;
+    position:relative;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    padding:0 20px;
+}
+
+.stat{
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
+}
+
+.stat strong{
+    display:block;
+    font-size:30px;
+    color:#5948c7;
+}
+
+/* GENERAL */
+
+.section{
+    max-width:1150px;
+    margin:auto;
+    padding:80px 20px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-title h2{
+    font-size:38px;
+}
+
+.section-title p{
+    color:#777;
+}
+
+/* POEMS */
+
+.poem-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.poem-card{
+    background:white;
+    padding:28px;
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,.07);
+    transition:.3s;
+}
+
+.poem-card:hover{
+    transform:translateY(-7px);
+}
+
+.poem-card h3{
+    font-size:24px;
+    margin:10px 0;
+}
+
+.category{
+    color:#6750e8;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.poem-card p{
+    color:#666;
+}
+
+.read-btn{
+    margin-top:18px;
+    border:none;
+    padding:11px 17px;
+    border-radius:10px;
+    background:#5b4bc4;
+    color:white;
+    cursor:pointer;
+}
+
+/* ABOUT */
+
+.about{
+    background:white;
+}
+
+.about-box{
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+}
+
+.about-box img{
+    width:150px;
+    height:150px;
+    object-fit:cover;
+    border-radius:50%;
+    margin-bottom:20px;
+}
+
+.about-box h3{
+    font-size:30px;
+    margin-bottom:10px;
+}
+
+/* FEATURES */
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.feature{
+    background:white;
+    padding:28px;
+    border-radius:18px;
+    text-align:center;
+}
+
+.feature-icon{
+    font-size:40px;
+}
+
+/* QUIZ */
+
+.quiz-section{
+    background:#171c3a;
+    color:white;
+}
+
+.quiz-box{
+    max-width:750px;
+    margin:auto;
+    text-align:center;
+}
+
+.quiz-question{
+    font-size:24px;
+    margin:25px 0;
+}
+
+.quiz-option{
+    display:block;
+    width:100%;
+    padding:14px;
+    margin:10px 0;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    background:white;
+    color:#222;
+}
+
+.quiz-result{
+    margin-top:20px;
+    font-size:20px;
+    font-weight:bold;
+}
+
+/* CONTACT */
+
+.contact-box{
+    max-width:650px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,.07);
+}
+
+.contact-box input,
+.contact-box textarea{
+    width:100%;
+    padding:13px;
+    margin:8px 0;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font:inherit;
+}
+
+.contact-box textarea{
+    min-height:120px;
+}
+
+.contact-box button{
+    padding:12px 25px;
+    border:none;
+    border-radius:10px;
+    background:#5b4bc4;
+    color:white;
+    cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
+
+/* MODAL */
+
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.75);
+    z-index:2000;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+}
+
+.modal.active{
+    display:flex;
+}
+
+.modal-content{
+    background:white;
+    color:#222;
+    max-width:700px;
+    width:100%;
+    max-height:85vh;
+    overflow:auto;
+    padding:35px;
+    border-radius:20px;
+    position:relative;
+}
+
+.close{
+    position:absolute;
+    right:15px;
+    top:10px;
+    border:none;
+    background:none;
+    font-size:30px;
+    cursor:pointer;
+}
+
+.modal-content pre{
+    white-space:pre-wrap;
+    font-family:inherit;
+    line-height:2;
+    margin-top:20px;
+}
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+    .poem-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:600px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .stats{
+        grid-template-columns:1fr;
+        margin-top:20px;
+    }
+
+    .poem-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        padding:60px 20px;
+    }
+
+    .author-photo{
+        width:160px;
+        height:160px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+<div class="nav-container">
+
+<div class="logo">
+কবিতা
+<span>কবি রবিউল ইসলাম</span>
+</div>
+
+<ul class="nav-links">
+
+<li><a href="#home">হোম</a></li>
+<li><a href="#poems">কবিতা</a></li>
+<li><a href="#about">লেখক</a></li>
+<li><a href="#quiz">কুইজ</a></li>
+<li><a href="#contact">যোগাযোগ</a></li>
+
+</ul>
+
+</div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<img
+src="rabiul.jpg"
+alt="কবি রবিউল ইসলাম"
+class="author-photo"
+>
+
+<div class="badge">
+✨ কবিতার জগতে স্বাগতম
+</div>
+
+<h1>
+শব্দে শব্দে
+<span>অনুভূতি</span>
+</h1>
+
+<h2>
+কবি রবিউল ইসলাম
+</h2>
+
+<p>
+কবিতা, অনুভূতি, প্রকৃতি, জীবন ও স্বপ্নের গল্প
+শব্দের মাধ্যমে তুলে ধরার একটি সুন্দর সাহিত্যিক জগৎ।
+</p>
+
+<div class="hero-buttons">
+
+<a href="#poems" class="btn primary-btn">
+📖 কবিতা পড়ুন
+</a>
+
+<a href="#about" class="btn secondary-btn">
+✍️ লেখক সম্পর্কে
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- STATS -->
+
+<section class="stats">
+
+<div class="stat">
+<strong>08+</strong>
+<span>কবিতা</span>
+</div>
+
+<div class="stat">
+<strong>04</strong>
+<span>বিষয়</span>
+</div>
+
+<div class="stat">
+<strong>01</strong>
+<span>লেখক</span>
+</div>
+
+</section>
+
+
+<!-- POEMS -->
+
+<section class="section" id="poems">
+
+<div class="section-title">
+
+<h2>📚 কবিতা সংগ্রহ</h2>
+
+<p>
+মনের মতো একটি কবিতা বেছে নিন
+</p>
+
+</div>
+
+
+<div class="poem-grid">
+
+
+<div class="poem-card">
+
+<span class="category">প্রকৃতি</span>
+
+<h3>
+বৃষ্টির গান
+</h3>
+
+<p>
+বৃষ্টির শব্দ নামে নীরব দুপুর জুড়ে,
+জানালার কাঁচে গল্প লিখে যায়...
+</p>
+
+<button class="read-btn"
+onclick="openPoem('বৃষ্টির গান',`বৃষ্টির শব্দ নামে নীরব দুপুর জুড়ে,
+জানালার কাঁচে গল্প লিখে যায়।
+
+মাটির গন্ধে ভেসে আসে পুরোনো স্মৃতি,
+মন তখন নিজের কাছেই ফিরে যায়।
+
+আকাশের মেঘ সরে গেলে
+রোদ আবার হাসে নতুন করে,
+প্রকৃতির এই ছোট্ট গান
+জীবনকে শেখায় আবার শুরু করতে হয়।`)">
+📖 পুরো কবিতা
+</button>
+
+</div>
+
+
+<div class="poem-card">
+
+<span class="category">জীবন</span>
+
+<h3>
+জীবনের পথ
+</h3>
+
+<p>
+পথ কখনো সহজ নয়,
+তবু পথ চলতে হয়...
+</p>
+
+<button class="read-btn"
+onclick="openPoem('জীবনের পথ',`পথ কখনো সহজ নয়,
+তবু পথ চলতে হয়।
+
+হোঁচট খেলে থেমে নয়,
+আবার উঠে দাঁড়াতে হয়।
+
+যে স্বপ্ন চোখে জ্বলে,
+তাকে ধরে রাখতে হয়।
+
+সময় যত কঠিন হোক,
+আশার আলো খুঁজে নিতে হয়।`)">
+📖 পুরো কবিতা
+</button>
+
+</div>
+
+
+<div class="poem-card">
+
+<span class="category">অনুভূতি</span>
+
+<h3>
+নীরব অনুভূতি
+</h3>
+
+<p>
+কিছু কথা বলা হয় না,
+চোখের ভাষায় থেকে যায়...
+</p>
+
+<button class="read-btn"
+onclick="openPoem('নীরব অনুভূতি',`কিছু কথা বলা হয় না,
+চোখের ভাষায় থেকে যায়।
+
+কিছু অনুভূতি নীরবে
+মনের ভেতর গান গায়।
+
+সব শব্দের প্রয়োজন নেই,
+কখনো নীরবতাই যথেষ্ট।`)">
+📖 পুরো কবিতা
+</button>
+
+</div>
+
+
+<div class="poem-card">
+
+<span class="category">স্বপ্ন</span>
+
+<h3>
+একটি স্বপ্ন
+</h3>
+
+<p>
+একটি স্বপ্ন দেখি আমি,
+আকাশ ছোঁয়ার নয়...
+</p>
+
+<button class="read-btn"
+onclick="openPoem('একটি স্বপ্ন',`একটি স্বপ্ন দেখি আমি,
+আকাশ ছোঁয়ার নয়—
+
+নিজের ভেতরের ভয়কে পেরিয়ে
+নিজেকে খুঁজে পাওয়ার।
+
+ছোট ছোট পদক্ষেপে
+একদিন পথ তৈরি হবে।`)">
+📖 পুরো কবিতা
+</button>
+
+</div>
+
+
+<div class="poem-card">
+
+<span class="category">প্রকৃতি</span>
+
+<h3>
+সবুজ সকাল
+</h3>
+
+<p>
+সবুজ পাতায় শিশির হাসে,
+পাখির ডাকে সকাল জাগে...
+</p>
+
+<button class="read-btn"
+onclick="openPoem('সবুজ সকাল',`সবুজ পাতায় শিশির হাসে,
+পাখির ডাকে সকাল জাগে।
+
+নতুন দিনের নতুন আলো
+মনকে নিয়ে স্বপ্নের বাগানে।`)">
+📖 পুরো কবিতা
+</button>
+
+</div>
+
+
+<div class="poem-card">
+
+<span class="category">জীবন</span>
+
+<h3>
+সময়ের গল্প
+</h3>
+
+<p>
+সময় নদীর মতো বয়ে যায়,
+কেউ তাকে থামাতে পারে না...
+</p>
+
+<button class="read-btn"
+onclick="openPoem('সময়ের গল্প',`সময় নদীর মতো বয়ে যায়,
+কেউ তাকে থামাতে পারে না।
+
+তাই প্রতিটি মুহূর্তকে
+অর্থপূর্ণ করে বাঁচতে হয়।`)">
+📖 পুরো কবিতা
+</button>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<div class="section">
+
+<div class="section-title">
+
+<h2>✍️ লেখক</h2>
+
+</div>
+
+<div class="about-box">
+
+<img src="rabiul.jpg" alt="কবি রবিউল ইসলাম">
+
+<h3>
+কবি রবিউল ইসলাম
+</h3>
+
+<p>
+রবিউল ইসলাম একজন কবি ও লেখক।
+জীবন, প্রকৃতি, অনুভূতি ও স্বপ্নকে
+কবিতার ভাষায় প্রকাশ করাই এই সাহিত্যিক
+জগতের মূল ভাবনা।
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FEATURES -->
+
+<section class="section">
+
+<div class="section-title">
+
+<h2>🌿 কবিতার বিষয়</h2>
+
+<p>
+বিভিন্ন অনুভূতির কবিতা
+</p>
+
+</div>
+
+<div class="features">
+
+<div class="feature">
+
+<div class="feature-icon">
+🌿
+</div>
+
+<h3>
+প্রকৃতি
+</h3>
+
+<p>
+প্রকৃতির সৌন্দর্য ও ঋতুর গল্প।
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">
+❤️
+</div>
+
+<h3>
+অনুভূতি
+</h3>
+
+<p>
+মনের কথা ও জীবনের অনুভব।
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">
+🌟
+</div>
+
+<h3>
+স্বপ্ন
+</h3>
+
+<p>
+আগামীর আশা ও সুন্দর স্বপ্ন।
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- QUIZ -->
+
+<section class="quiz-section" id="quiz">
+
+<div class="section">
+
+<div class="quiz-box">
+
+<h2>
+🧠 কবিতা কুইজ
+</h2>
+
+<p class="quiz-question">
+কবিতার অন্যতম গুরুত্বপূর্ণ উপাদান কোনটি?
+</p>
+
+<button class="quiz-option"
+onclick="checkAnswer(this,'correct')">
+শব্দ ও অনুভূতি
+</button>
+
+<button class="quiz-option"
+onclick="checkAnswer(this,'wrong')">
+শুধু সংখ্যা
+</button>
+
+<button class="quiz-option"
+onclick="checkAnswer(this,'wrong')">
+শুধু ছবি
+</button>
+
+<p class="quiz-result" id="quizResult"></p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="section" id="contact">
+
+<div class="section-title">
+
+<h2>
+📩 যোগাযোগ
+</h2>
+
+<p>
+আপনার মতামত লিখে রাখতে পারেন
+</p>
+
+</div>
+
+<div class="contact-box">
+
+<input
+type="text"
+placeholder="আপনার নাম"
+>
+
+<input
+type="email"
+placeholder="আপনার ইমেইল"
+>
+
+<textarea
+placeholder="আপনার বার্তা..."
+></textarea>
+
+<button onclick="sendMessage()">
+বার্তা পাঠান
+</button>
+
+<p id="message"></p>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<h3>
+কবি রবিউল ইসলাম
+</h3>
+
+<p>
+© 2026 — বাংলা কবিতার ডিজিটাল সংগ্রহ
+</p>
+
+</footer>
+
+
+<!-- POEM MODAL -->
+
+<div class="modal" id="poemModal">
+
+<div class="modal-content">
+
+<button class="close"
+onclick="closePoem()">
+×
+</button>
+
+<h2 id="modalTitle"></h2>
+
+<pre id="modalText"></pre>
+
+</div>
+
+</div>
+
+
+<script>
+
+function openPoem(title,text){
+
+document.getElementById("modalTitle").textContent=title;
+
+document.getElementById("modalText").textContent=text;
+
+document.getElementById("poemModal").classList.add("active");
+
+}
+
+function closePoem(){
+
+document.getElementById("poemModal").classList.remove("active");
+
+}
+
+
+document.getElementById("poemModal").addEventListener("click",function(e){
+
+if(e.target===this){
+
+closePoem();
+
+}
+
+});
+
+
+function checkAnswer(button,result){
+
+const output=document.getElementById("quizResult");
+
+if(result==="correct"){
+
+output.textContent="✅ সঠিক উত্তর!";
+
+}else{
+
+output.textContent="❌ ভুল উত্তর। আবার চেষ্টা করো।";
+
+}
+
+}
+
+
+function sendMessage(){
+
+document.getElementById("message").textContent=
+"ধন্যবাদ! আপনার বার্তাটি এই ডেমো ওয়েবসাইটে গ্রহণ করা হয়েছে।";
+
+}
+
+</script>
+
+</body>
+</html>
